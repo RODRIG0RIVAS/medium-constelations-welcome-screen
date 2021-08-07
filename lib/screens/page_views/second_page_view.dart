@@ -17,7 +17,7 @@ class _SecondPageViewState extends State<SecondPageView>
   late Animation<Offset> secondTextAnimation;
   late Animation<Offset> thirdTextAnimation;
   late Animation<Offset> fourthTextAnimation;
-  late Animation<Offset> fifthText;
+  late Animation<Offset> fifthTextAnimation;
 
   final image = AssetImage('assets/images/welcome_second.jpg');
 
@@ -50,7 +50,7 @@ class _SecondPageViewState extends State<SecondPageView>
       interval: Interval(0.3, 0.4),
     );
 
-    fifthText = buildTextTween(
+    fifthTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: 1.2,
       interval: Interval(0.4, 0.5),
@@ -81,7 +81,7 @@ class _SecondPageViewState extends State<SecondPageView>
         text: SecondPageStrings.fourthText,
       ),
       buildTextSlideTransition(
-        position: fifthText,
+        position: fifthTextAnimation,
         text: SecondPageStrings.fifthText,
       ),
     ];
