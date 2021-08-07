@@ -13,12 +13,12 @@ class FirstPageView extends StatefulWidget {
 class _FirstPageViewState extends State<FirstPageView>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-  late Animation<Offset> firstText;
-  late Animation<Offset> secondText;
-  late Animation<Offset> thirdText;
-  late Animation<Offset> fourthText;
-  late Animation<Offset> fifthText;
-  late Animation<Offset> sixthText;
+  late Animation<Offset> firstTextAnimation;
+  late Animation<Offset> secondTextAnimation;
+  late Animation<Offset> thirdTextAnimation;
+  late Animation<Offset> fourthTextAnimation;
+  late Animation<Offset> fifthTextAnimation;
+  late Animation<Offset> sixthTextAnimation;
 
   final image = AssetImage('assets/images/welcome_first.jpg');
 
@@ -27,37 +27,37 @@ class _FirstPageViewState extends State<FirstPageView>
   void buildTextTweens() {
     final buildTextTween = TextTweenBuilderImpl();
 
-    firstText = buildTextTween(
+    firstTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: -1.2,
       interval: Interval(0.0, 0.1),
     );
 
-    secondText = buildTextTween(
+    secondTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: -1.2,
       interval: Interval(0.1, 0.2),
     );
 
-    thirdText = buildTextTween(
+    thirdTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: -1.2,
       interval: Interval(0.2, 0.3),
     );
 
-    fourthText = buildTextTween(
+    fourthTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: -1.2,
       interval: Interval(0.3, 0.4),
     );
 
-    fifthText = buildTextTween(
+    fifthTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: -1.2,
       interval: Interval(0.4, 0.5),
     );
 
-    sixthText = buildTextTween(
+    sixthTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: -1.2,
       interval: Interval(0.5, 0.6),
@@ -67,15 +67,15 @@ class _FirstPageViewState extends State<FirstPageView>
   List<Widget> firstTextGroup() {
     return [
       buildTextSlideTransition(
-        position: firstText,
+        position: firstTextAnimation,
         text: FirstPageStrings.firstText,
       ),
       buildTextSlideTransition(
-        position: secondText,
+        position: secondTextAnimation,
         text: FirstPageStrings.secondText,
       ),
       buildTextSlideTransition(
-        position: thirdText,
+        position: thirdTextAnimation,
         text: FirstPageStrings.thirdText,
       )
     ];
@@ -84,15 +84,15 @@ class _FirstPageViewState extends State<FirstPageView>
   List<Widget> secondTextGroup() {
     return [
       buildTextSlideTransition(
-        position: fourthText,
+        position: fourthTextAnimation,
         text: FirstPageStrings.fourthText,
       ),
       buildTextSlideTransition(
-        position: fifthText,
+        position: fifthTextAnimation,
         text: FirstPageStrings.fifthText,
       ),
       buildTextSlideTransition(
-        position: sixthText,
+        position: sixthTextAnimation,
         text: FirstPageStrings.sixthText,
       )
     ];

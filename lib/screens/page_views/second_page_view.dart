@@ -13,11 +13,11 @@ class SecondPageView extends StatefulWidget {
 class _SecondPageViewState extends State<SecondPageView>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-  late Animation<Offset> firstText;
-  late Animation<Offset> secondText;
-  late Animation<Offset> thirdText;
-  late Animation<Offset> fourthText;
-  late Animation<Offset> fifthText;
+  late Animation<Offset> firstTextAnimation;
+  late Animation<Offset> secondTextAnimation;
+  late Animation<Offset> thirdTextAnimation;
+  late Animation<Offset> fourthTextAnimation;
+  late Animation<Offset> fifthTextAnimation;
 
   final image = AssetImage('assets/images/welcome_second.jpg');
 
@@ -26,31 +26,31 @@ class _SecondPageViewState extends State<SecondPageView>
   void buildTextTweens() {
     final buildTextTween = TextTweenBuilderImpl();
 
-    firstText = buildTextTween(
+    firstTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: 1.2,
       interval: Interval(0.0, 0.1),
     );
 
-    secondText = buildTextTween(
+    secondTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: 1.2,
       interval: Interval(0.1, 0.2),
     );
 
-    thirdText = buildTextTween(
+    thirdTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: 1.2,
       interval: Interval(0.2, 0.3),
     );
 
-    fourthText = buildTextTween(
+    fourthTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: 1.2,
       interval: Interval(0.3, 0.4),
     );
 
-    fifthText = buildTextTween(
+    fifthTextAnimation = buildTextTween(
       animationController: animationController,
       firstPositionOffsetValue: 1.2,
       interval: Interval(0.4, 0.5),
@@ -60,11 +60,11 @@ class _SecondPageViewState extends State<SecondPageView>
   List<Widget> firstTextGroup() {
     return [
       buildTextSlideTransition(
-        position: firstText,
+        position: firstTextAnimation,
         text: SecondPageStrings.firstText,
       ),
       buildTextSlideTransition(
-        position: secondText,
+        position: secondTextAnimation,
         text: SecondPageStrings.secondText,
       ),
     ];
@@ -73,15 +73,15 @@ class _SecondPageViewState extends State<SecondPageView>
   List<Widget> secondTextGroup() {
     return [
       buildTextSlideTransition(
-        position: thirdText,
+        position: thirdTextAnimation,
         text: SecondPageStrings.thirdText,
       ),
       buildTextSlideTransition(
-        position: fourthText,
+        position: fourthTextAnimation,
         text: SecondPageStrings.fourthText,
       ),
       buildTextSlideTransition(
-        position: fifthText,
+        position: fifthTextAnimation,
         text: SecondPageStrings.fifthText,
       ),
     ];
