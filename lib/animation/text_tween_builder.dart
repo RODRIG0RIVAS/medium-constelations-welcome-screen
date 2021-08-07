@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+/// Classe abstrata para facilitar a utilização e manutenabilidade do código
 abstract class TextTweenBuilder {
   Animation<Offset> call({
-    required Interval interval,
-    required double firstPositionOffsetValue,
-    required AnimationController animationController,
+    required Interval interval, //intervalo da animação
+    required double firstPositionOffsetValue, //posição inicial da animação
+    required AnimationController animationController, //o controle da animação
   });
 }
 
