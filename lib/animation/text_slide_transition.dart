@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Classe abstrata para facilitar a utilização e manutenabilidade do código
+/// Classe abstrata para facilitar a utilização e manutenibilidade do código
 abstract class TextSlideTransition {
   SlideTransition call({
     required Animation<Offset> position, //a animação da posição
