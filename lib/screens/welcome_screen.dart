@@ -12,18 +12,25 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+  /// páginas para o PageView
   final pages = [FirstPageView(), SecondPageView()];
+
   final pageController = PageController();
   double? _currentPage = 0.0;
 
+  /// duração da transição da mudança de página quando usado o botão
   final pageTransitionDuration = Duration(milliseconds: 300);
+
+  /// tipo de Curve para a transição
   final pageTransitionCurve = Curves.ease;
 
+  /// pré-carregando as imagens
   void precacheImages() {
     precacheImage(AssetImage('assets/images/welcome_first.jpg'), context);
     precacheImage(AssetImage('assets/images/welcome_second.jpg'), context);
   }
 
+  /// mudando as cores da barra de status e de navegação
   void uiOverlaySettings() {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.black,
@@ -68,13 +75,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget leftButton() {
     if (_currentPage == 0) {
       return Container(
-        height: 0,
+        height:
+            0, // Altura especificada para que o container não tome toda a tela
       );
     } else {
       return backButton();
     }
   }
 
+  /// O botão de continuação será mostrado a partir de quando a primeira página
+  /// começar a sair, pra ocorrer um efeito mais agradável na mudança de página
   Widget rightButton() {
     if ((_currentPage! > 0.1) && (_currentPage! <= 1.0)) {
       return continueButton();
@@ -102,6 +112,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   void initState() {
     SchedulerBinding.instance!.addPostFrameCallback((_) {
+      //para pegar o contexto
       precacheImages();
     });
 
@@ -110,6 +121,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     super.initState();
   }
 
+  /// Vale lembrar que o context pode ser pego aqui e usado, neste caso, para
+  /// pré-carregar as imagens
   @override
   void didChangeDependencies() {
     //precacheImages();
