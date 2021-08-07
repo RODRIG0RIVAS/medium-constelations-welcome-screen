@@ -13,6 +13,8 @@ class FirstPageView extends StatefulWidget {
 class _FirstPageViewState extends State<FirstPageView>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
+
+  /// Animations
   late Animation<Offset> firstTextAnimation;
   late Animation<Offset> secondTextAnimation;
   late Animation<Offset> thirdTextAnimation;
@@ -24,6 +26,8 @@ class _FirstPageViewState extends State<FirstPageView>
 
   final buildTextSlideTransition = TextSlideTransitionImpl();
 
+  /// Aqui aparece a implementação de que o Interval pode ir de 0.0 até 1.0
+  /// Contudo, ele não precisa ir até 1.0, apenas ficar neste intervalo.
   void buildTextTweens() {
     final buildTextTween = TextTweenBuilderImpl();
 
@@ -64,6 +68,11 @@ class _FirstPageViewState extends State<FirstPageView>
     );
   }
 
+  /// Vemos que o "position" pede a posição animada que já foi criada no
+  /// método acima.
+  ///
+  /// Este método retorna uma Lista de Widget com a animação de transição
+  /// (SlideTransition). Um por cada texto.
   List<Widget> firstTextGroup() {
     return [
       buildTextSlideTransition(
@@ -81,6 +90,7 @@ class _FirstPageViewState extends State<FirstPageView>
     ];
   }
 
+  /// A mesma coisa do método acima, porém para o segundo conjunto de textos.
   List<Widget> secondTextGroup() {
     return [
       buildTextSlideTransition(
@@ -141,12 +151,12 @@ class _FirstPageViewState extends State<FirstPageView>
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: firstTextGroup(),
+                children: firstTextGroup(), //O primeiro grupo de textos
               ),
               SizedBox(height: 30.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: secondTextGroup(),
+                children: secondTextGroup(), //O segundo grupo de textos
               )
             ],
           ),
