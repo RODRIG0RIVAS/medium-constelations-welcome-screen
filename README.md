@@ -24,7 +24,7 @@
 <p id="#medium_article">
     <h2>Artigo no Medium</h2>
     <p>Você pode ler clicando
-        <a href="https://medium.com/@rodrigorivasdev/welcome-screen-com-texto-animado-utilizando-flutter-c9750066c5f1" target=_blank>
+        <a href="https://medium.com/@rodrigorivasdev/welcome-screen-com-texto-animado-utilizando-flutter-c9750066c5f1" target="_blank">
         aqui
         </a>
         .
