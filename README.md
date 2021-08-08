@@ -37,7 +37,7 @@
         <a href="https://medium.com/@rodrigorivasdev/welcome-screen-com-texto-animado-utilizando-flutter-c9750066c5f1" target="_blank">
         here
         </a>
-        .
+        . (Just in Brazilian Portuguese for now)
     </p>
 </p>
 
