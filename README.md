@@ -1,10 +1,9 @@
+<h1 align="center">Constelations Welcome Screen</h1>
+<p align="center">Uma aplicação Flutter para mostrar como fazer uma Welcome Screen com texto animado sem packages externos</p>
+
 <div align="center">
     <img src="assets/medium/toMedium.gif"/>
 </div>
-
-
-<h1 align="center">Constelations Welcome Screen</h1>
-<p align="center">Uma aplicação Flutter para mostrar como fazer uma Welcome Screen com texto animado sem packages externos</p>
 
 <div align="center">
     <img src="https://img.shields.io/badge/progress-complete-green"/>
