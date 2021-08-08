@@ -24,7 +24,7 @@
 <p>
     <h2>Readme</h2>
     <p>This readme is also available in
-        <a href="https://medium.com/@rodrigorivasdev/welcome-screen-com-texto-animado-utilizando-flutter-c9750066c5f1" target="_blank">
+        <a href="https://github.com/RODRIG0RIVAS/medium-constelations-welcome-screen/blob/master/README_pt-br.md" target="_blank">
         Brazilian Portuguese
         </a>
         .
