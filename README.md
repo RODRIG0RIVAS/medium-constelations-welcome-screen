@@ -2,10 +2,6 @@
 <p align="center">Uma aplicação Flutter para mostrar como fazer uma Welcome Screen com texto animado sem packages externos</p>
 
 <div align="center">
-    <img src="assets/medium/toMedium.gif"/>
-</div>
-
-<div align="center">
     <img src="https://img.shields.io/badge/progress-complete-green"/>
     <img src="https://img.shields.io/badge/medium-published-black"/>
 </div>
@@ -16,6 +12,12 @@
     <a href="#technology">Tecnologia</a> | 
     <a href="#author">Autor</a>
 </p>
+
+<hr/>
+
+<div align="center">
+    <img src="assets/medium/toMedium.gif"/>
+</div>
 
 <hr/>
 
