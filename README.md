@@ -39,11 +39,11 @@
 
 <p id="#technology">
     <h2>Tecnologia</h2>
-    <p><a href="https://flutter.dev/" target="_blank">Flutter</a> at 1.25.0-8-3.pre - channel beta with Dart 2.12.0 (build 2.12.0-0-133.7.beta)</p>
+    <p><a href="https://flutter.dev/" target="_blank">Flutter</a> 2.12</p>
 </p>
 
 <p id="#author">
     <h2>Autor</h2>
-    <p>Developed by Rodrigo Rivas</p>
+    <p>Desenvolvido por Rodrigo Rivas</p>
     <a href="https://www.linkedin.com/in/rodrigo-rivas-dev/" target="_blank">LinkedIn</a>
 </p>
